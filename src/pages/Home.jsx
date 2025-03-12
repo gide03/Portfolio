@@ -1,7 +1,8 @@
 import { Navbar } from "../components/Navbar";
 import { useState } from "react";
 import { SocialBt } from "../components/Button";
-import { SocialCard } from "../components/Card";
+import { SocialCard, SkillCard } from "../components/Card";
+import { Tag } from "../components/Tag";
 
 const Nav = {
   ABOUT: "About",
@@ -32,6 +33,7 @@ const HomePage = () => {
         
         {/* Presentation */}
         <div>Presentation: {activeNav}</div>
+
         {/* ABOUT */}
         {(activeNav === Nav.ABOUT) && <div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quis facere debitis laboriosam amet iure facilis totam necessitatibus voluptate. Aut tenetur repellendus qui reiciendis voluptatibus animi, quia eos beatae vel iusto odio officiis numquam officia repudiandae quidem veniam eveniet eum. Asperiores, quasi esse officia culpa odit doloremque repellat aut modi fugit temporibus necessitatibus eveniet quo cupiditate. Temporibus totam magnam enim. Molestias, reiciendis atque. Rem incidunt quasi, provident porro laborum non ut debitis impedit natus voluptate atque ducimus ea delectus ex doloribus expedita maxime et? Repudiandae mollitia illo quaerat assumenda officiis modi. Ex, repudiandae? Mollitia, iste nulla tempora ullam perferendis qui?</p>
@@ -59,6 +61,21 @@ const HomePage = () => {
             </SocialBt>
           </SocialCard>
         </div>}
+
+        {/* SKILLS */}
+        {(activeNav == Nav.SKILL) && <SkillCard>
+          <Tag>C++</Tag>
+          <Tag>Python</Tag>
+          <Tag>C</Tag>
+          <Tag>JavaScript</Tag>
+          <Tag>Linux</Tag>
+          <Tag>OpenCV</Tag>
+          <Tag>Database</Tag>
+          <Tag>Microcontrollers</Tag>
+          <Tag>Electronics</Tag>
+          <Tag>Web/Software Development</Tag>
+
+        </SkillCard>}
       </div>
     </>
 }
