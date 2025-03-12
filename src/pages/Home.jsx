@@ -1,7 +1,7 @@
 import { Navbar } from "../components/Navbar";
 import { useState } from "react";
 import { SocialBt } from "../components/Button";
-import { SocialCard, SkillCard, CatalogCard } from "../components/Card";
+import { SocialCard, SkillCard, CatalogCard, ArticleCard } from "../components/Card";
 import { Tag } from "../components/Tag";
 import { CardDeckScrollable } from "../components/Scrollbox";
 
@@ -10,7 +10,7 @@ const Nav = {
   EXPERIENCE: "Experience",
   SKILL: "Skill",
   PORTFOLIO: "Portfolio",
-  CONTACT: "Contact"
+  // CONTACT: "Contact"
 }
 
 const HomePage = () => {
@@ -29,7 +29,7 @@ const HomePage = () => {
           <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.EXPERIENCE}</div>
           <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.SKILL}</div>
           <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.PORTFOLIO}</div>
-          <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.CONTACT}</div>
+          {/* <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.CONTACT}</div> */}
         </Navbar>
         
         {/* Presentation */}
@@ -37,6 +37,7 @@ const HomePage = () => {
 
         {/* ABOUT */}
         {(activeNav === Nav.ABOUT) && <div>
+          <h1>About Me</h1>
           <p>Dedicated professional specializing in creating innovative platforms and applications that streamline operations in the utilities and industrial sectors. With 4+ years of experience and driven by a passion for innovation and reliability, I thrive on building software that bridges the gap between complex engineering challenges and user-friendly solutions.</p>
           <SocialCard>
             <SocialBt>
@@ -63,11 +64,31 @@ const HomePage = () => {
           </SocialCard>
         </div>}
 
+        {/* Experience */}
+        {(activeNav == Nav.EXPERIENCE) && <div>
+          <h1>Experiences</h1>
+          <ArticleCard>
+              <h3 class="font-bold text-xl text-white">Firmware Engineer</h3>
+              <p class="text-blue-300">Itron.inc - South Cikarang (September 2020 - Present)</p>
+              <p class="text-gray-300">Increase product stability by conducting thorough root cause analysis on reported bugs, leading to targeted fixes and improvements in subsequent releases. Implement automated testing frameworks to quickly identify and resolve firmware issues during development cycles.</p>
+          </ArticleCard>
+          <ArticleCard>
+              <h3 class="font-bold text-xl text-white">Embedded System Engineer (Freelance)</h3>
+              <p class="text-blue-300">CV San Multimedia - Semarang, Indonesia (August 2019 - March 2020)</p>
+              <p class="text-gray-300">Design, develop, and test a device for customer service index satisfaction sampling. This device provides features that support HR Manager to gather employee's performance. I implement IoT framework as project base.</p>
+          </ArticleCard>
+          <ArticleCard>
+              <h3 class="font-bold text-xl text-white">Robotic Researcher</h3>
+              <p class="text-blue-300">Robotic Research Center SWCU - Salatiga, Central Java (July 2016 - December 2019)</p>
+              <p class="text-gray-300">Develop wheeled robot (Mechanical, Electrical, and Programming) to perform autonomous robot to play soccer ball like human plays robot. Implement Data Driven Decision Making (DDDM) with sensor fusion, and interconnected robot agent. To ArticleCard dynamic games strategy and movement.</p>
+          </ArticleCard>
+        </div>}
+
         {/* Portfolio */}
         {(activeNav == Nav.PORTFOLIO) && <CardDeckScrollable>
             <CatalogCard bg='AutonomousRobotLocalization.webp'>
               <span className="title">Autonomous Robot Navigation System</span>
-              <p className="subtitle">Built a ROS-based robot using STM32 microcontrollers and LiDAR for obstacle avoidance in dynamic environments.</p>
+              <p ArticleCardName="subtitle">Built a ROS-based robot using STM32 microcontrollers and LiDAR for obstacle avoidance in dynamic environments.</p>
               {/* <p>Tech Stack: STM32, ROS2, Python, LiDAR, SLAM.</p> */}
             </CatalogCard>
             <CatalogCard bg='IoTSmatHomeAUtomationSystem.webp'>
@@ -98,7 +119,9 @@ const HomePage = () => {
         </CardDeckScrollable>} 
 
         {/* SKILLS */}
-        {(activeNav == Nav.SKILL) && <SkillCard>
+        {(activeNav == Nav.SKILL) && <>
+        <h1>Skills</h1>
+        <SkillCard>
           <Tag>C++</Tag>
           <Tag>Python</Tag>
           <Tag>C</Tag>
@@ -109,7 +132,8 @@ const HomePage = () => {
           <Tag>Microcontrollers</Tag>
           <Tag>Electronics</Tag>
           <Tag>Web/Software Development</Tag>
-        </SkillCard>}
+        </SkillCard>
+        </>}
       </div>
     </>
 }

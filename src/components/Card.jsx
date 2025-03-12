@@ -47,3 +47,15 @@ export const CatalogCard = styled.div`
         text-size: smaller; 
     }
 `;
+
+export const ArticleCard = styled.div`
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1em;
+    
+    text-align: left;
+
+    border: 1px solid rgba(255, 255, 255, .1);
+    padding: 0.3em 1em 0.3em 1em;
+    background: radial-gradient(150% 150% at 0% 100%, #261c45 0%, rgba(35, 25, 74, 0) 100%);     
+`;
