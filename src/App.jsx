@@ -9,7 +9,22 @@ const AppContainer = styled.div`
   flex-direction: column;
 `;
 
+const ProfileContainer = styled.div`
+  img {
+    height: 300px;
+  }
+
+  span{
+    magin-top: -1rem;
+    font-weight: 500;
+    font-size: large;
+  }
+
+  margin-bottom: 3rem;
+`
+
 const MainContent = styled.main`
+  position: relative;
   flex: 1;
 `;
 
@@ -20,10 +35,11 @@ function App() {
         {/* Gllobal style applied here */}
         {/* <GlobalStyles/>*/}
 
-        <div>
-          <h1>[Your Name]</h1>
-          <h3>[Title]</h3>
-        </div>
+        <ProfileContainer>
+          <img src="/Author.webp" alt="author" />
+          <h1>Gidion Siwi Nugroho</h1>
+          <span>Embedded System Specialist</span>
+        </ProfileContainer>
 
         <MainContent>
           <Routes>

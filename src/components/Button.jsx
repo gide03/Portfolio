@@ -6,7 +6,9 @@ export const SocialBt = styled.a`
     align-items: center;
     justify-content: center;
     padding: 3px;
-    
+
+    margin: 5px;
+
     .social-icon {
         path{
             fill: #705df2;

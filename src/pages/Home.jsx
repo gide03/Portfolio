@@ -33,11 +33,11 @@ const HomePage = () => {
         </Navbar>
         
         {/* Presentation */}
-        <div>Presentation: {activeNav}</div>
+        {/* <div>Presentation: {activeNav}</div> */}
 
         {/* ABOUT */}
         {(activeNav === Nav.ABOUT) && <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quis facere debitis laboriosam amet iure facilis totam necessitatibus voluptate. Aut tenetur repellendus qui reiciendis voluptatibus animi, quia eos beatae vel iusto odio officiis numquam officia repudiandae quidem veniam eveniet eum. Asperiores, quasi esse officia culpa odit doloremque repellat aut modi fugit temporibus necessitatibus eveniet quo cupiditate. Temporibus totam magnam enim. Molestias, reiciendis atque. Rem incidunt quasi, provident porro laborum non ut debitis impedit natus voluptate atque ducimus ea delectus ex doloribus expedita maxime et? Repudiandae mollitia illo quaerat assumenda officiis modi. Ex, repudiandae? Mollitia, iste nulla tempora ullam perferendis qui?</p>
+          <p>Dedicated professional specializing in creating innovative platforms and applications that streamline operations in the utilities and industrial sectors. With 4+ years of experience and driven by a passion for innovation and reliability, I thrive on building software that bridges the gap between complex engineering challenges and user-friendly solutions.</p>
           <SocialCard>
             <SocialBt>
               <span className="social-icon">
