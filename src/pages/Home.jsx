@@ -1,8 +1,9 @@
 import { Navbar } from "../components/Navbar";
 import { useState } from "react";
 import { SocialBt } from "../components/Button";
-import { SocialCard, SkillCard } from "../components/Card";
+import { SocialCard, SkillCard, CatalogCard } from "../components/Card";
 import { Tag } from "../components/Tag";
+import { CardDeckScrollable } from "../components/Scrollbox";
 
 const Nav = {
   ABOUT: "About",
@@ -62,6 +63,17 @@ const HomePage = () => {
           </SocialCard>
         </div>}
 
+        {/* Portfolio */}
+        {(activeNav == Nav.PORTFOLIO) && <CardDeckScrollable>
+            <CatalogCard>Product 1</CatalogCard>
+            <CatalogCard>Product 2</CatalogCard>
+            <CatalogCard>Product 3</CatalogCard>
+            <CatalogCard>Product 4</CatalogCard>
+            <CatalogCard>Product 5</CatalogCard>
+            <CatalogCard>Product 6</CatalogCard>
+            <CatalogCard>Product 7</CatalogCard>
+        </CardDeckScrollable>} 
+
         {/* SKILLS */}
         {(activeNav == Nav.SKILL) && <SkillCard>
           <Tag>C++</Tag>
@@ -74,7 +86,6 @@ const HomePage = () => {
           <Tag>Microcontrollers</Tag>
           <Tag>Electronics</Tag>
           <Tag>Web/Software Development</Tag>
-
         </SkillCard>}
       </div>
     </>

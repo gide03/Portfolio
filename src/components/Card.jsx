@@ -18,3 +18,11 @@ export const SkillCard = styled.div`
 
     white-space: nowrap;
 `;
+
+export const CatalogCard = styled.div`
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+`;
