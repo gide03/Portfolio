@@ -65,13 +65,36 @@ const HomePage = () => {
 
         {/* Portfolio */}
         {(activeNav == Nav.PORTFOLIO) && <CardDeckScrollable>
-            <CatalogCard>Product 1</CatalogCard>
-            <CatalogCard>Product 2</CatalogCard>
-            <CatalogCard>Product 3</CatalogCard>
-            <CatalogCard>Product 4</CatalogCard>
-            <CatalogCard>Product 5</CatalogCard>
-            <CatalogCard>Product 6</CatalogCard>
-            <CatalogCard>Product 7</CatalogCard>
+            <CatalogCard bg='AutonomousRobotLocalization.webp'>
+              <span className="title">Autonomous Robot Navigation System</span>
+              <p className="subtitle">Built a ROS-based robot using STM32 microcontrollers and LiDAR for obstacle avoidance in dynamic environments.</p>
+              {/* <p>Tech Stack: STM32, ROS2, Python, LiDAR, SLAM.</p> */}
+            </CatalogCard>
+            <CatalogCard bg='IoTSmatHomeAUtomationSystem.webp'>
+              <span className="title">IoT Smart Home Automation System</span>
+              <p className="subtitle">Designed a low-power IoT system to control lights, HVAC, and security via a custom PCB with ESP32 and BLE.</p>
+              {/* <p>Tech Stack: ESP32, C++, FreeRTOS, MQTT, Raspberry Pi Gateway.</p> */}
+            </CatalogCard>
+            <CatalogCard bg='EnergyEfficientEdgeAIDevice.webp'>
+              <span className="title">Energy-Efficient Edge AI Device</span>
+              <p className="subtitle">Deployed TinyML on a Raspberry Pi Pico for facial recognition with TensorFlow Lite</p>
+              {/* <p>Tech Stack: Raspberry Pi Pico, TensorFlow Lite, MicroPython, OpenCV.</p> */}
+            </CatalogCard>
+            <CatalogCard bg='BluetoothControlledLEDMatrix.webp'>
+              <span className="title">Bluetooth-Controlled LED Matrix Display</span>
+              <p className="subtitle">Designed an 8x8 LED grid that displays custom patterns via a smartphone app over Bluetooth.</p>
+              {/* <p>Arduino Uno, HC-05 Bluetooth module, LED matrix, MIT App Inventor.</p> */}
+            </CatalogCard>
+            <CatalogCard bg='DataLogger.webp'>
+              <span className="title">Temperature & Humidity Data Logger</span>
+              <p className="subtitle">Built a portable sensor node using DHT11 to log environmental data to an SD card. Data visualized via a Python script.</p>
+              {/* <p>Arduino Nano, DHT11 sensor, SD card module, Python (matplotlib).</p> */}
+            </CatalogCard>
+            <CatalogCard bg='OTAUpdate.webp'>
+              <span className="title">Wi-Fi-Enabled OTA Firmware Upgrader</span>
+              <p className="subtitle">Built a basic OTA system for ESP32 devices to update firmware wirelessly via a local web server. Demonstrated rollback safety.</p>
+              {/* <p>ESP32, ArduinoOTA, PlatformIO, Simple HTTP Server</p> */}
+            </CatalogCard>
         </CardDeckScrollable>} 
 
         {/* SKILLS */}
