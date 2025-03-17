@@ -58,4 +58,8 @@ export const ArticleCard = styled.div`
     border: 1px solid rgba(255, 255, 255, .1);
     padding: 0.3em 1em 0.3em 1em;
     background: radial-gradient(150% 150% at 0% 100%, #261c45 0%, rgba(35, 25, 74, 0) 100%);     
+
+    &:hover{
+        margin-top: -5px;
+    }
 `;

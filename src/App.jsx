@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import HomePage from './pages/Home';
 import './App.css'
 
+const BASE_NAME = '/Portfolio';
+
 const AppContainer = styled.div`
   min-height: 100vh;
   display: flex;
@@ -30,20 +32,20 @@ const MainContent = styled.main`
 
 function App() {
   return (
-    <Router>
+    <Router basename={BASE_NAME}>
       <AppContainer>
         {/* Gllobal style applied here */}
         {/* <GlobalStyles/>*/}
 
         <ProfileContainer>
-          <img src="/Author.webp" alt="author" />
+          <img src={`./Author.webp`} alt="author" />
           <h1>Gidion Siwi Nugroho</h1>
           <span>Embedded System Specialist</span>
         </ProfileContainer>
 
         <MainContent>
           <Routes>
-            <Route path="/" element={<HomePage/>}/>
+            <Route path="/" element={<HomePage base={BASE_NAME}/>}/>
           </Routes>
         </MainContent>
       </AppContainer>
