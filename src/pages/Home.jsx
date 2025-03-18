@@ -4,6 +4,7 @@ import { SocialBt } from "../components/Button";
 import { SocialCard, SkillCard, CatalogCard, ArticleCard } from "../components/Card";
 import { Tag } from "../components/Tag";
 import { CardDeckScrollable } from "../components/Scrollbox";
+import { Container } from "../components/Container";
 
 const Nav = {
   ABOUT: "About",
@@ -65,24 +66,26 @@ const HomePage = ({base}) => {
         </div>}
 
         {/* Experience */}
-        {(activeNav == Nav.EXPERIENCE) && <div>
+        {(activeNav == Nav.EXPERIENCE) && <Container className="column justify-center align-center">
           <h1>Experiences</h1>
-          <ArticleCard>
-              <h3 class="font-bold text-xl text-white">Firmware Engineer</h3>
-              <p class="text-blue-300">Itron.inc - South Cikarang (September 2020 - Present)</p>
-              <p class="text-gray-300">Increase product stability by conducting thorough root cause analysis on reported bugs, leading to targeted fixes and improvements in subsequent releases. Implement automated testing frameworks to quickly identify and resolve firmware issues during development cycles.</p>
-          </ArticleCard>
-          <ArticleCard>
-              <h3 class="font-bold text-xl text-white">Embedded System Engineer (Freelance)</h3>
-              <p class="text-blue-300">CV San Multimedia - Semarang, Indonesia (August 2019 - March 2020)</p>
-              <p class="text-gray-300">Design, develop, and test a device for customer service index satisfaction sampling. This device provides features that support HR Manager to gather employee's performance. I implement IoT framework as project base.</p>
-          </ArticleCard>
-          <ArticleCard>
-              <h3 class="font-bold text-xl text-white">Robotic Researcher</h3>
-              <p class="text-blue-300">Robotic Research Center SWCU - Salatiga, Central Java (July 2016 - December 2019)</p>
-              <p class="text-gray-300">Develop wheeled robot (Mechanical, Electrical, and Programming) to perform autonomous robot to play soccer ball like human plays robot. Implement Data Driven Decision Making (DDDM) with sensor fusion, and interconnected robot agent. To ArticleCard dynamic games strategy and movement.</p>
-          </ArticleCard>
-        </div>}
+          <Container className="column justify-center align-center" style={{paddingTop: "1em"}}>
+            <ArticleCard>
+                <h3 class="font-bold text-xl text-white">Firmware Engineer</h3>
+                <p class="text-blue-300">Itron.inc - South Cikarang (September 2020 - Present)</p>
+                <p class="text-gray-300">Increase product stability by conducting thorough root cause analysis on reported bugs, leading to targeted fixes and improvements in subsequent releases. Implement automated testing frameworks to quickly identify and resolve firmware issues during development cycles.</p>
+            </ArticleCard>
+            <ArticleCard>
+                <h3 class="font-bold text-xl text-white">Embedded System Engineer (Freelance)</h3>
+                <p class="text-blue-300">CV San Multimedia - Semarang, Indonesia (August 2019 - March 2020)</p>
+                <p class="text-gray-300">Design, develop, and test a device for customer service index satisfaction sampling. This device provides features that support HR Manager to gather employee's performance. I implement IoT framework as project base.</p>
+            </ArticleCard>
+            <ArticleCard>
+                <h3 class="font-bold text-xl text-white">Robotic Researcher</h3>
+                <p class="text-blue-300">Robotic Research Center SWCU - Salatiga, Central Java (July 2016 - December 2019)</p>
+                <p class="text-gray-300">Develop wheeled robot (Mechanical, Electrical, and Programming) to perform autonomous robot to play soccer ball like human plays robot. Implement Data Driven Decision Making (DDDM) with sensor fusion, and interconnected robot agent. To ArticleCard dynamic games strategy and movement.</p>
+            </ArticleCard>
+          </Container>
+        </Container>}
 
         {/* Portfolio */}
         {(activeNav == Nav.PORTFOLIO) && <CardDeckScrollable>

@@ -52,6 +52,8 @@ export const ArticleCard = styled.div`
     width: 80%;
     margin: auto;
     margin-bottom: 1em;
+
+    border-radius: 8px;
     
     text-align: left;
 
@@ -59,7 +61,10 @@ export const ArticleCard = styled.div`
     padding: 0.3em 1em 0.3em 1em;
     background: radial-gradient(150% 150% at 0% 100%, #261c45 0%, rgba(35, 25, 74, 0) 100%);     
 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
     &:hover{
-        margin-top: -5px;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 `;
