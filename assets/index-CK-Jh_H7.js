@@ -159,15 +159,13 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     border-radius: 10px;
     font-weight: 500;
 `,Ig=Me.div`
-    // position: absolute;
-    // left: 0;
-    
-    max-width: 100%;
+    position: relative;
+    max-width: 100vw;
     overflow-x: auto;
-    margin-left: 0;
-    
-    padding: 0px 1rem 0px 1rem;
+    margin-left: auto;
     box-sizing: border-box;
+
+    margin-left: 0;
 
     /* Hide scrollbar for WebKit browsers */
     .deck{
@@ -176,7 +174,8 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         &::-webkit-scrollbar {
             display: none; /* Safari and Chrome */
         }
-
+            
+        padding: 0px 0.5rem 0px 0.5rem;
         overflow: auto;
         white-space: nowrap;
         display: flex;
@@ -194,6 +193,8 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         }
         div:hover{
             cursor: pointer;
+            font-weight: 700;
+            color: #fff;
         }
     }
 `,tp=({children:u})=>{const c=M.useRef(null),s=M.useRef(null),f=M.useRef(!1),o=M.useRef(0),h=M.useRef(0);return M.useEffect(()=>{const g=s.current,A=C=>{f.current=!0,o.current=C.pageX-g.offsetLeft,h.current=g.scrollLeft,g.style.cursor="grabbing"},v=C=>{f.current=!1,g.style.cursor="grab"},y=()=>{f.current=!1,g.style.cursor="grab"},x=C=>{if(!f.current)return;C.preventDefault();const N=(C.pageX-g.offsetLeft-o.current)*.8;g.scrollLeft=h.current-N,console.log(g.scrollLeft)};return g.addEventListener("mousedown",A),g.addEventListener("mouseleave",v),g.addEventListener("mouseup",y),g.addEventListener("mousemove",x),()=>{g&&(g.removeEventListener("mousedown",A),g.removeEventListener("mouseleave",v),g.removeEventListener("mouseup",y),g.removeEventListener("mousemove",x))}}),L.jsx(Ig,{id:"container",ref:c,children:L.jsx("div",{className:"deck",ref:s,children:u})})},cu=Me.div`
