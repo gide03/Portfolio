@@ -23,6 +23,7 @@ export const Container = styled.div`
 
     h1{
         width: 100%; 
+        color: rgb(147 197 253 / var(--tw-text-opacity, 1));
     }
         
 `;
