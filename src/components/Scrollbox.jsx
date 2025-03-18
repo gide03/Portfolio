@@ -2,10 +2,12 @@ import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 export const ScrollableContainer = styled.div`
-    position: absolute;
-    left: 0;
+    // position: absolute;
+    // left: 0;
+    
     max-width: 100%;
     overflow-x: auto;
+    margin-left: 0;
     
     padding: 0px 1rem 0px 1rem;
     box-sizing: border-box;
