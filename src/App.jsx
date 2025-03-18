@@ -35,6 +35,7 @@ const ProfileContainer = styled.div`
     font-size: 2.7rem;
     line-height: 1;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
 
   .prf-title{
@@ -63,7 +64,7 @@ function App() {
 
         <ProfileContainer>
           {/* <img src={`./Author.webp`} alt="author" /> */}
-          <span className='prf-name'>Gidion Siwi Nugroho</span>
+          <span className='prf-name' >Gidion Siwi Nugroho</span>
           <p className='prf-title'>Software Engineer</p>
         </ProfileContainer>
 
