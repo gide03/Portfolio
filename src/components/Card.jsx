@@ -53,15 +53,23 @@ export const ArticleCard = styled.div`
     margin: auto;
     margin-bottom: 1em;
 
-    border-radius: 8px;
-    
+    border: 0px solid red;
+    border-left-width: 4px;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
     text-align: left;
-
-    border: 1px solid rgba(255, 255, 255, .1);
-    padding: 0.3em 1em 0.3em 1em;
-    background: radial-gradient(150% 150% at 0% 100%, #261c45 0%, rgba(35, 25, 74, 0) 100%);     
+    padding-left: 1rem;   
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    .article-title{
+        color: #fff;
+    }
+    .article-subtitle{
+        color: rgb(147 197 253 / var(--tw-text-opacity, 1));
+    }
+    .article-description{
+        color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+    }
 
     &:hover{
         transform: translateY(-5px);

@@ -1,43 +1,14 @@
-import { Navbar } from "../components/Navbar";
-import { useState } from "react";
 import { SocialBt } from "../components/Button";
 import { SocialCard, SkillCard, CatalogCard, ArticleCard } from "../components/Card";
 import { Tag } from "../components/Tag";
 import { CardDeckScrollable } from "../components/Scrollbox";
 import { Container } from "../components/Container";
 
-const Nav = {
-  ABOUT: "About",
-  EXPERIENCE: "Experience",
-  SKILL: "Skill",
-  PORTFOLIO: "Portfolio",
-  // CONTACT: "Contact"
-}
-
 const HomePage = ({base}) => {
-    const [activeNav, setNav] = useState(Nav.ABOUT);
-
-    const NavClickHandler = (event) => {
-      const text = event.target.textContent;
-      setNav(text);
-    }
-
     return <>
       <div>
-        {/* Navigation */}
-        <Navbar className='navigation'>
-          <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.ABOUT}</div>
-          <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.EXPERIENCE}</div>
-          <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.SKILL}</div>
-          <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.PORTFOLIO}</div>
-          {/* <div className="nav-item" onClick={(e)=>NavClickHandler(e)}>{Nav.CONTACT}</div> */}
-        </Navbar>
-        
-        {/* Presentation */}
-        {/* <div>Presentation: {activeNav}</div> */}
-
         {/* ABOUT */}
-        {(activeNav === Nav.ABOUT) && <div>
+        <Container className="column justify-center align-center">
           <h1>About Me</h1>
           <p>Dedicated professional specializing in creating innovative platforms and applications that streamline operations in the utilities and industrial sectors. With 4+ years of experience and driven by a passion for innovation and reliability, I thrive on building software that bridges the gap between complex engineering challenges and user-friendly solutions.</p>
           <SocialCard>
@@ -48,7 +19,7 @@ const HomePage = ({base}) => {
                 </svg>
               </span>
             </SocialBt>
-            <SocialBt href="#tweeter">
+            <SocialBt href="https://x.com/gidion_siwi">
               <span className="social-icon">
                 <svg width="33" height="33" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M23.954 2.323C23.069 2.712 22.124 2.977 21.129 3.098C22.143 2.487 22.923 1.524 23.292 0.375C22.341 0.93 21.287 1.334 20.165 1.559C19.269 0.6 17.992 0 16.574 0C13.857 0 11.654 2.203 11.654 4.917C11.654 5.307 11.699 5.682 11.781 6.041C7.691 5.848 4.066 3.884 1.64 0.915C1.213 1.637 0.974 2.476 0.974 3.39C0.974 5.1 1.844 6.603 3.162 7.486C2.355 7.46 1.596 7.238 0.934 6.87V6.931C0.934 9.316 2.627 11.305 4.88 11.758C4.467 11.869 4.031 11.929 3.584 11.929C3.27 11.929 2.969 11.899 2.668 11.843C3.299 13.796 5.113 15.22 7.272 15.26C5.592 16.579 3.463 17.365 1.17 17.365C0.78 17.365 0.391 17.342 0 17.298C2.189 18.692 4.768 19.507 7.557 19.507C16.611 19.507 21.556 12.011 21.556 5.521C21.556 5.312 21.556 5.101 21.541 4.891C22.502 4.202 23.341 3.331 24.001 2.343L23.954 2.323Z" fill="#1DA1F2"></path>
@@ -63,29 +34,46 @@ const HomePage = ({base}) => {
               </span>
             </SocialBt>
           </SocialCard>
-        </div>}
+        </Container>
+
+        {/* SKILLS */}
+        <Container className="column justify-center align-center">
+          <h1>Skills</h1>
+          <SkillCard>
+            <Tag>C++</Tag>
+            <Tag>Python</Tag>
+            <Tag>C</Tag>
+            <Tag>JavaScript</Tag>
+            <Tag>Linux</Tag>
+            <Tag>OpenCV</Tag>
+            <Tag>Database</Tag>
+            <Tag>Microcontrollers</Tag>
+            <Tag>Electronics</Tag>
+            <Tag>Web/Software Development</Tag>
+          </SkillCard>
+        </Container>
 
         {/* Experience */}
-        {(activeNav == Nav.EXPERIENCE) && <Container className="column justify-center align-center">
+        <Container className="column justify-center align-center">
           <h1>Experiences</h1>
           <Container className="column justify-center align-center" style={{paddingTop: "1em"}}>
             <ArticleCard>
-                <h3 class="font-bold text-xl text-white">Firmware Engineer</h3>
-                <p class="text-blue-300">Itron.inc - South Cikarang (September 2020 - Present)</p>
-                <p class="text-gray-300">Increase product stability by conducting thorough root cause analysis on reported bugs, leading to targeted fixes and improvements in subsequent releases. Implement automated testing frameworks to quickly identify and resolve firmware issues during development cycles.</p>
+                <h3 class="article-title">Firmware Engineer</h3>
+                <p class="article-subtitle">Itron.inc - South Cikarang (September 2020 - Present)</p>
+                <p class="article-description">Increase product stability by conducting thorough root cause analysis on reported bugs, leading to targeted fixes and improvements in subsequent releases. Implement automated testing frameworks to quickly identify and resolve firmware issues during development cycles.</p>
             </ArticleCard>
             <ArticleCard>
-                <h3 class="font-bold text-xl text-white">Embedded System Engineer (Freelance)</h3>
-                <p class="text-blue-300">CV San Multimedia - Semarang, Indonesia (August 2019 - March 2020)</p>
-                <p class="text-gray-300">Design, develop, and test a device for customer service index satisfaction sampling. This device provides features that support HR Manager to gather employee's performance. I implement IoT framework as project base.</p>
+                <h3 class="article-title">Embedded System Engineer (Freelance)</h3>
+                <p class="article-subtitle">CV San Multimedia - Semarang, Indonesia (August 2019 - March 2020)</p>
+                <p class="article-description">Design, develop, and test a device for customer service index satisfaction sampling. This device provides features that support HR Manager to gather employee's performance. I implement IoT framework as project base.</p>
             </ArticleCard>
             <ArticleCard>
-                <h3 class="font-bold text-xl text-white">Robotic Researcher</h3>
-                <p class="text-blue-300">Robotic Research Center SWCU - Salatiga, Central Java (July 2016 - December 2019)</p>
-                <p class="text-gray-300">Develop wheeled robot (Mechanical, Electrical, and Programming) to perform autonomous robot to play soccer ball like human plays robot. Implement Data Driven Decision Making (DDDM) with sensor fusion, and interconnected robot agent. To ArticleCard dynamic games strategy and movement.</p>
+                <h3 class="article-title">Robotic Researcher</h3>
+                <p class="article-subtitle">Robotic Research Center SWCU - Salatiga, Central Java (July 2016 - December 2019)</p>
+                <p class="article-description">Develop wheeled robot (Mechanical, Electrical, and Programming) to perform autonomous robot to play soccer ball like human plays robot. Implement Data Driven Decision Making (DDDM) with sensor fusion, and interconnected robot agent. To ArticleCard dynamic games strategy and movement.</p>
             </ArticleCard>
           </Container>
-        </Container>}
+        </Container>
 
         {/* Portfolio */}
         {(activeNav == Nav.PORTFOLIO) && <CardDeckScrollable>
@@ -120,23 +108,6 @@ const HomePage = ({base}) => {
               {/* <p>ESP32, ArduinoOTA, PlatformIO, Simple HTTP Server</p> */}
             </CatalogCard>
         </CardDeckScrollable>} 
-
-        {/* SKILLS */}
-        {(activeNav == Nav.SKILL) && <>
-        <h1>Skills</h1>
-        <SkillCard>
-          <Tag>C++</Tag>
-          <Tag>Python</Tag>
-          <Tag>C</Tag>
-          <Tag>JavaScript</Tag>
-          <Tag>Linux</Tag>
-          <Tag>OpenCV</Tag>
-          <Tag>Database</Tag>
-          <Tag>Microcontrollers</Tag>
-          <Tag>Electronics</Tag>
-          <Tag>Web/Software Development</Tag>
-        </SkillCard>
-        </>}
       </div>
     </>
 }

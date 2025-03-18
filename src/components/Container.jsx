@@ -20,5 +20,9 @@ export const Container = styled.div`
     &.align-center{
         align-items: center;
     }
+
+    h1{
+        width: 100%; 
+    }
         
 `;
